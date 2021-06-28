@@ -20,13 +20,15 @@ body{
 	align-items: center;
 	flex-direction: column;
 	padding: 50px 20px;
-	gap: 40px
-}
+	gap: 40px;
+	background-image: url(../images/bg-pattern-top-mobile.svg), 
+	url('../images/bg-pattern-bottom-mobile.svg');	
+	background-repeat: no-repeat;
+	background-position: top left ,  right; }
 
 .header__contenedor{
 	display: flex;
 	flex-direction: column;
-	border: 1px solid #eee;
 	gap:10px
 }
 
@@ -76,7 +78,6 @@ body{
 
 .principal__contenido{
 	padding-bottom: 70px;
-	border: 1px solid #eee;
 
 }
 
@@ -122,54 +123,77 @@ body{
 
 
 @media screen and (min-width:700px){
+
+	body{
+		padding: 70px 150px;
+		height: 100vh;
+		align-items: normal;
+		gap: 20px;
+		background-image: url('../images/bg-pattern-top-desktop.svg') ,url(../images/bg-pattern-bottom-desktop.svg);
+		background-repeat: no-repeat;
+		background-position: top left ,  right; 
+	}
 	
 	.header__contenedor{
 		flex-direction: row;
-		padding: 50px 150px;
 		gap: 30px;
 	}
 	.header__contenido{
 		width: 50%;
-		border: 1px solid red
 	}
 	
 	.header__titulo{
 		text-align: left;
-		font-size: 50px;
+		font-size: 53px;
+		line-height: 1;
+		margin-bottom: 15px;
 	}
 	.header__parrafo{
 		text-align: left;
+		font-size: 20px;
 		
 	}
 	
 	
 	.contenedor__rank{
 		width: 50%;
-		border: 1px solid red;
 		align-items: center;
-		justify-content: space-around
+		justify-content: space-around;
+		
 	}
 	.contenido__rank{
-		width: 70%;
+		width: 80%;
+		flex-direction: row;
+		justify-content: flex-start;
+		height: 55px;
+		padding-left: 30px;
+		gap:30px
 	}
+	.contenido__rank-texto{
+		font-size: 16px;
+	}
+
 	.contenido__rank:nth-child(2){
-		background: blue;
 		margin-left: 10%
 	}
 	.contenido__rank:nth-child(3){
-		background: yellow;
 		margin-left: 20%
 	
-	}
-	
-	.principal__contenido{
-		padding: 50px 150px;
-
 	}
 	
 	.seccion__tarjeta{
 		flex-direction: row;
 		align-items: center;
+		justify-content: space-between;
+		
+	}
+	.tarjeta__contenedor-parrafo{
+		font-size: 17px
+	}
+	.tarjeta__contenedor{
+		max-width: 400px;
+		min-width: 300px;
+		height: 200px
 	}
 	.tarjeta__contenedor:nth-child(2){
 		margin-top: 3%
